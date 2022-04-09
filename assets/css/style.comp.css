@@ -1,0 +1,196 @@
+/*=============== BREAKPOINTS ===============*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: var(--body-color); }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: var(--dark); }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--first-color-alt); }
+
+::selection {
+  background-color: var(--dark);
+  color: var(--grey); }
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+
+body {
+  background-image: var(--body-color);
+  color: var(--grey);
+  font-family: "Poppins", sans-serif;
+  font-size: var(--normal-font-size);
+  min-height: 100vh;
+  font-weight: 500; }
+
+h1 {
+  font-size: var(--h1-font-size);
+  text-shadow: var(--text-shadow);
+  color: var(--grey);
+  letter-spacing: 0.2rem; }
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer; }
+
+input {
+  font-family: inherit;
+  font-weight: 500; }
+
+li {
+  list-style: none; }
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --dark: #212730;
+  --black: rgb(57, 62, 70);
+  --teal: rgb(0, 170, 179);
+  --grey: rgb(237, 237, 237);
+  --body-color: linear-gradient(
+    to bottom,
+    #00aab3,
+    #1a869a,
+    #296479,
+    #2b4455,
+    #212730
+  );
+  --opacity-1: rgba(0, 170, 179, 0.8);
+  --text-shadow: 0.3rem 0.3rem 0px rgba(0, 0, 0, 0.2);
+  --box-shadow: rgba(0, 0, 0, 0.19) 0px 0.8rem 1.5rem,
+    rgba(0, 0, 0, 0.23) 0px 0.3rem 0.3rem;
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --h1-font-size: 3rem; }
+
+/* RESPONSIVE TYPOGRAPHY */
+@media screen and (min-width: 62em) {
+  :root {
+    --h1-font-size: 2.5rem; } }
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.form-input {
+  width: 15rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background-color: var(--grey); }
+  .form-input:focus {
+    outline: none; }
+  .form-input::placeholder {
+    color: var(--dark); }
+
+.form-btn {
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: var(--teal);
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .form-btn:hover {
+    background-color: var(--opacity-1); }
+  .form-btn__icon {
+    color: var(--grey); }
+
+.form-input, .form-btn {
+  height: 3rem;
+  border: none;
+  font-size: var(--normal-font-size);
+  line-height: 1; }
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .todo-list {
+    width: 20rem; }
+  .todo-box {
+    background-color: var(--grey);
+    margin: 0.5rem;
+    color: var(--dark);
+    font-size: var(--small-font-size);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.6rem;
+    transition: all 0.5s ease; }
+  .todo-item {
+    flex: 1;
+    padding: 0 1rem; }
+  .todo-check, .todo-delete {
+    color: var(--grey);
+    border: none;
+    padding: 1rem;
+    pointer-events: none; }
+  .todo-check {
+    background-color: var(--teal); }
+  .todo-delete {
+    background-color: var(--dark);
+    border-radius: 0rem 0.5rem 0.5rem 0rem; }
+  .todo-fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0; }
+  .todo-completed {
+    text-decoration: line-through;
+    opacity: 0.5; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none; }
+
+.select {
+  position: relative;
+  overflow: hidden;
+  font-family: inherit; }
+  .select-box {
+    color: var(--dark);
+    width: 12rem;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer; }
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    line-height: 1;
+    height: 100%;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    background-color: var(--teal);
+    pointer-events: none;
+    transition: all 0.3s ease; }
+  .select:hover::after {
+    background-color: var(--opacity-1); }
+
+@media only screen and (max-width: 37em) {
+  .form {
+    flex-wrap: wrap; } }
+
+@media only screen and (max-width: 26.75em) {
+  .form-input {
+    width: 12rem; }
+  .form-btn {
+    margin-right: 0; } }

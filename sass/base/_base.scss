@@ -1,0 +1,73 @@
+/*=============== BREAKPOINTS ===============*/
+
+$bp-large: 62em; //992px / 16px = 60.5em
+$bp-medium: 48em; //768px / 16px = 48em
+$bp-small: 37em; //592px / 16px = 37em
+$bp-smaller: 26.75em; //428px / 16px = 26.75em
+$bp-tiny: 20em; // 320px / 16px = 20em
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// SCROLLBAR
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: var(--body-color);
+
+  &-thumb {
+    border-radius: 0.5rem;
+    background-color: var(--dark);
+    &:hover {
+      background-color: var(--first-color-alt);
+    }
+  }
+}
+
+::selection {
+  background-color: var(--dark);
+  color: var(--grey);
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: var(--body-color);
+  color: var(--grey);
+  font-family: "Poppins", sans-serif;
+  font-size: var(--normal-font-size);
+  min-height: 100vh;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  text-shadow: var(--text-shadow);
+  color: var(--grey);
+  letter-spacing: 0.2rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <a target="_blank" href="https://icons8.com/icon/wInpuiPHyKyG/check">Check</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+
+    <!-- ==== FAVICONS ==== -->
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="assets/favicon/favicon-16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="assets/favicon/favicon-32.png"
+    />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="assets/favicon/favicon-96.png"
+    />
+    <!-- ==== GOOGLE FONTS ==== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ==== FONT AWESOME CDN ==== -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- ==== STYLING ==== -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Todo list</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Todo List</h1>
+    </header>
+    <form class="form" action="#">
+      <input type="text" class="form-input" placeholder="Add a todo" />
+      <button class="form-btn" type="submit">
+        <i class="fa-solid fa-circle-plus form-btn__icon"></i>
+      </button>
+      <div class="select">
+        <select name="todos" class="select-box filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="todo">
+      <ul class="todo-list"></ul>
+    </div>
+
+    <!-- ==== JAVASCRIPT ==== -->
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

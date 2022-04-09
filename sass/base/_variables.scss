@@ -1,0 +1,38 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+
+  --dark: #212730;
+  --black: rgb(57, 62, 70);
+  --teal: rgb(0, 170, 179);
+  --grey: rgb(237, 237, 237);
+
+  // linear gradient
+  --body-color: linear-gradient(
+    to bottom,
+    #00aab3,
+    #1a869a,
+    #296479,
+    #2b4455,
+    #212730
+  );
+
+  // OPACITY
+  --opacity-1: rgba(0, 170, 179, 0.8);
+
+  // SHADOW
+  --text-shadow: 0.3rem 0.3rem 0px rgba(0, 0, 0, 0.2);
+  --box-shadow: rgba(0, 0, 0, 0.19) 0px 0.8rem 1.5rem,
+    rgba(0, 0, 0, 0.23) 0px 0.3rem 0.3rem;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --h1-font-size: 3rem;
+}
+
+/* RESPONSIVE TYPOGRAPHY */
+@media screen and (min-width: $bp-large) {
+  :root {
+    --h1-font-size: 2.5rem;
+  }
+}

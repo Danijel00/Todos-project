@@ -1,0 +1,160 @@
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  &-input {
+    width: 15rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: var(--grey);
+
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: var(--dark);
+    }
+  }
+  &-btn {
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background-color: var(--teal);
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--opacity-1);
+    }
+
+    &__icon {
+      color: var(--grey);
+    }
+  }
+  &-input,
+  &-btn {
+    height: 3rem;
+    border: none;
+    font-size: var(--normal-font-size);
+    line-height: 1;
+  }
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-list {
+    // min-width: 30%;
+    width: 20rem;
+  }
+  &-box {
+    background-color: var(--grey);
+    margin: 0.5rem;
+    color: var(--dark);
+    font-size: var(--small-font-size);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.6rem;
+    transition: all 0.5s ease;
+  }
+
+  &-item {
+    flex: 1;
+    padding: 0 1rem;
+  }
+
+  &-check,
+  &-delete {
+    color: var(--grey);
+    border: none;
+    padding: 1rem;
+    pointer-events: none;
+  }
+  // check btn
+  &-check {
+    background-color: var(--teal);
+  }
+  // delete btn
+  &-delete {
+    background-color: var(--dark);
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+  }
+
+  // fall animation
+  &-fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+  }
+
+  // Completed todo
+  &-completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+
+  &-box {
+    color: var(--dark);
+    width: 12rem;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    line-height: 1;
+    height: 100%;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    background-color: var(--teal);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::after {
+    background-color: var(--opacity-1);
+  }
+}
+
+// RESPONSIVE DESIGN
+
+.form {
+  // 592px
+  @media only screen and (max-width: $bp-small) {
+    flex-wrap: wrap;
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    &-input {
+      width: 12rem;
+    }
+    &-btn {
+      margin-right: 0;
+    }
+  }
+}
