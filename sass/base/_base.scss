@@ -12,20 +12,6 @@ $bp-smaller: 26.75em; //428px / 16px = 26.75em
   box-sizing: inherit;
 }
 
-// SCROLLBAR
-::-webkit-scrollbar {
-  width: 1rem;
-  background-color: var(--body-color);
-
-  &-thumb {
-    border-radius: 0.5rem;
-    background-color: var(--dark);
-    &:hover {
-      background-color: var(--first-color-alt);
-    }
-  }
-}
-
 ::selection {
   background-color: var(--dark);
   color: var(--grey);
