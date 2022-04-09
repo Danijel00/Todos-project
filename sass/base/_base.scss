@@ -1,10 +1,8 @@
 /*=============== BREAKPOINTS ===============*/
 
 $bp-large: 62em; //992px / 16px = 60.5em
-$bp-medium: 48em; //768px / 16px = 48em
 $bp-small: 37em; //592px / 16px = 37em
 $bp-smaller: 26.75em; //428px / 16px = 26.75em
-$bp-tiny: 20em; // 320px / 16px = 20em
 
 *,
 *::before,
@@ -51,8 +49,16 @@ body {
 h1 {
   font-size: var(--h1-font-size);
   text-shadow: var(--text-shadow);
-  color: var(--grey);
   letter-spacing: 0.2rem;
+  background: var(--dark);
+  background: -webkit-linear-gradient(to right, var(--dark), var(--black));
+  background: var(--back-img);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 button {
