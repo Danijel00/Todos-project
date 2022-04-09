@@ -20,6 +20,9 @@
   // OPACITY
   --opacity-1: rgba(0, 170, 179, 0.8);
 
+  // BACKGROUND IMAGE
+  --back-img: linear-gradient(to right, var(--dark), var(--black));
+
   // SHADOW
   --text-shadow: 0.3rem 0.3rem 0px rgba(0, 0, 0, 0.2);
   --box-shadow: rgba(0, 0, 0, 0.19) 0px 0.8rem 1.5rem,
@@ -27,12 +30,12 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --h1-font-size: 3rem;
+  --h1-font-size: 10rem;
 }
 
 /* RESPONSIVE TYPOGRAPHY */
 @media screen and (min-width: $bp-large) {
   :root {
-    --h1-font-size: 2.5rem;
+    --h1-font-size: 7rem;
   }
 }
